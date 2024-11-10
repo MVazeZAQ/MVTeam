@@ -4,7 +4,7 @@ from django.utils.crypto import get_random_string
 
 class Note(models.Model):
     CATEGORY = (('BUSINESS', 'Business'),
-                ('PERSONAL', 'Personal'),
+                ('PERSONAL', 'Personal'), 
                 ('IMPORTANT','Important'))
     title = models.CharField(max_length=100)
     body = models.TextField()
