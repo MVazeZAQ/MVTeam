@@ -1,0 +1,20 @@
+form {
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 30px auto;
+  background-color: white;
+}
+
+form h5 {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+form input {
+  height: 40px;
+  /* margin-bottom: 30px; */
+}
