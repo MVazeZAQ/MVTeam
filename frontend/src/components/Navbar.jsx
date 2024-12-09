@@ -25,12 +25,11 @@ const NavBar = () => {
             </button>
           </div>
         </div>
-
-        <a to="/add-notes" style={{ textDecoration: "none" }}>
+        <Link to="/add-notes" style={{ textDecoration: "none" }}>
           <button className="btn btn-outline-primary btn-md" type="button">
             <FaSquarePlus /> Add Notes
           </button>
-        </a>
+        </Link>
       </div>
     </nav>
   );
