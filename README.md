@@ -8,10 +8,10 @@ The goal of this project is to develop an application that allows users to creat
 |Nr| Full Name              | Student ID | GitHub Username |
 |--|------------------------|------------|------------------|
 |1| Botirjon Shokirov   | 41923    | Botirjon2003     
-|2| Murad Vahabli   | 123456     | MVazeZAQ         |
+|2| Murad Vahabli   | 41300     | MVazeZAQ         |
 |3| Amanidinov             | 123457     | Amanidinov       |
 |4| Vahid Nuraddinov       | 41744     | VahidNuraddinov  |
-|5| Hajiyev Magsud         | 123459     | hajiyevmagsud    |
+|5| Hajiyev Magsud         | 42372     | hajiyevmagsud    |
 |6| Selam Sahabe Karadag| 40469     | selamsahabe      |
 |7| Sevval Ozyurt          | 41293     | Sevval-Ozyurt    |
 | 8|Oguzhan Yazdicutan     | 47563     | OguzhanYazdicutan         |
