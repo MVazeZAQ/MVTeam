@@ -1,17 +1,28 @@
 import React from "react";
 
+const filter = ["Business", "Personal", "Important"];
+
 const Filter = () => {
   return (
     <div className="container" style={{ width: "500px", margin: "20px auto" }}>
+      <label htmlFor="note-filter" className="form-label">
+        Filter Notes
+      </label>
       <select
+        id="note-filter"
         className="form-select"
-        aria-label="Default select example"
+        aria-label="Filter Notes"
         style={{ height: "50px" }}
+        defaultValue=""
       >
-        <option selected>Filter Notes</option>
-        <option value="1">Business</option>
-        <option value="2">Personal</option>
-        <option value="3">Important</option>
+        <option value="" disabled>
+          Select Filter
+        </option>
+        {filter.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
       </select>
     </div>
   );
