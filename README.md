@@ -9,7 +9,7 @@ The goal of this project is to develop an application that allows users to creat
 |--|------------------------|------------|------------------|
 |1| Botirjon Shokirov   | 41923    | Botirjon2003     
 |2| Murad Vahabli   | 41300     | MVazeZAQ         |
-|3| Amanidinov             | 123457     | Amanidinov       |
+|3| Aitbek Amanidinov             | 41782     | Amanidinov       |
 |4| Vahid Nuraddinov       | 41744     | VahidNuraddinov  |
 |5| Hajiyev Magsud         | 42372     | hajiyevmagsud    |
 |6| Selam Sahabe Karadag| 40469     | selamsahabe      |
