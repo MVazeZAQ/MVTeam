@@ -14,12 +14,15 @@ import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
 const App = () => {
   const [notes, setNotes] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get("http://127.0.0.1:8008/notes")
       .then((res) => {
         console.log(res.data);
         setNotes(res.data);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err.message);
@@ -28,7 +31,7 @@ const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<HomePage notes={notes} />} />
+        <Route index element={<HomePage notes={notes} loading={isLoading} />} />
         <Route path="/add-notes" element={<AddNotes />} />
         <Route path="/notes-detail" element={<NotePage />} />
         <Route path="/edit-note" element={<EditNotes />} />
