@@ -74,8 +74,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'inotes.wsgi.application'
 CORS_ALLOWED_ORIGINS = [
-"http://localhost:5173/"
+    "http://localhost:5173",
 ]
+
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
