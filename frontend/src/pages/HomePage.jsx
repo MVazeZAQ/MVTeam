@@ -1,12 +1,12 @@
+import React from "react";
 import Filter from "../components/Filter";
 import NoteCardContainer from "../components/NoteCardContainer";
-import Navbar from "../components/Navbar";
 
-const HomePage = ({ notes }) => {
+const HomePage = ({ notes, loading }) => {
   return (
     <>
       <Filter />
-      <NoteCardContainer notes={notes} />
+      <NoteCardContainer notes={notes} loading={loading} />
     </>
   );
 };
