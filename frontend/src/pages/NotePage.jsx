@@ -3,6 +3,7 @@ import "./NotePage.css";
 import { BiSolidTrashAlt } from "react-icons/bi";
 import { FiEdit } from "react-icons/fi";
 import Modal from "../components/Modal";
+import { Link } from "react-router-dom";
 
 const NotePage = () => {
   return (
@@ -19,10 +20,12 @@ const NotePage = () => {
           </p>
         </span>
         <span className="button-group">
-          <button className="btn btn-primary">
-            <FiEdit />
-            <span>Edit</span>
-          </button>
+          <Link to="/edit-note">
+            <button className="btn btn-primary">
+              <FiEdit />
+              <span>Edit</span>
+            </button>
+          </Link>
           <button className="btn btn-danger">
             <BiSolidTrashAlt />
             <span>Delete</span>
