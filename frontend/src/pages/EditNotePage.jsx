@@ -1,5 +1,5 @@
 import React from "react";
-import "./AddNotes.css";
+import "./AddNotePage.css";
 
 const EditNotes = () => {
   return (
