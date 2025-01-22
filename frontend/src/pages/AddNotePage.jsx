@@ -1,7 +1,7 @@
 import React from "react";
-import "./AddNotes.css";
+import "./AddNotePage.css";
 
-const AddNotes = () => {
+const AddNotePage = () => {
   return (
     <form>
       <h5>Add New Note</h5>
@@ -55,4 +55,4 @@ const AddNotes = () => {
   );
 };
 
-export default AddNotes;
+export default AddNotePage;

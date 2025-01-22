@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
-import AddNotes from "./pages/AddNotes";
+import AddNotePage from "./pages/AddNotePage";
 import NotePage from "./pages/NoteDetailPage";
 import EditNotes from "./pages/EditNotePage";
 import axios from "axios";
@@ -46,7 +46,7 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage notes={notes} loading={isLoading} />} />
-        <Route path="/add-notes" element={<AddNotes />} />
+        <Route path="/add-notes" element={<AddNotePage />} />
         <Route path="/notes/:slug" element={<NoteDetailPage />} />
         <Route path="/edit-note" element={<EditNotes />} />
       </Route>
