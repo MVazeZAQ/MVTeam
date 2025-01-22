@@ -29,6 +29,19 @@ const App = () => {
         console.log(err.message);
       });
   }, []);
+  const addNote = (data) => {
+    axios
+      .post("http://127.0.0.1:8008/notes/", data)
+      .then((res) => {
+        setNotes([...notes, data]);
+        toast.success("A new note has been added");
+        console.log(res.data);
+      })
+
+      .catch((err) => {
+        console.log(console.log(err.message));
+      });
+  };
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
