@@ -46,7 +46,7 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage notes={notes} loading={isLoading} />} />
-        <Route path="/add-notes" element={<AddNotePage />} />
+        <Route path="/add-notes" element={<AddNotePage addNote={addNote} />} />
         <Route path="/notes/:slug" element={<NoteDetailPage />} />
         <Route path="/edit-note" element={<EditNotes />} />
       </Route>
