@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://127.0.0.1:8008/notes")
+      .get("http://127.0.0.1:8008/notes/")
       .then((res) => {
         console.log(res.data);
         setNotes(res.data);
