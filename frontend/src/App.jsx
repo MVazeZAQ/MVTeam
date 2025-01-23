@@ -42,14 +42,26 @@ const App = () => {
         console.log(console.log(err.message));
       });
   };
+  const updateNote = (data, slug) => {
+    axios
+      .put(`http://127.0.0.1:8008/notes/${slug}/`, data)
+      .then((res) => {
+        console.log(res.data);
+        toast.success("Note updated succesfully");
+      })
 
+      .catch((err) => console.log(err.message));
+  };
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage notes={notes} loading={isLoading} />} />
         <Route path="/add-notes" element={<AddNotePage addNote={addNote} />} />
         <Route path="/notes/:slug" element={<NoteDetailPage />} />
-        <Route path="/edit-note/:slug" element={<EditNotePage />} />
+        <Route
+          path="/edit-note/:slug"
+          element={<EditNotePage updateNote={updateNote} />}
+        />
       </Route>
     )
   );
