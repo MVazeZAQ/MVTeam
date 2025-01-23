@@ -2,7 +2,7 @@ import React from "react";
 import { MdMarkunread } from "react-icons/md";
 import { FaNoteSticky } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { FormatDate } from "./FormatDate";
+import { FormatDate } from "../utils/FormatDate";
 
 const NoteCard = ({ note }) => {
   const body = `${note.body.split(" ").slice(0, 20).join(" ")} ...`;

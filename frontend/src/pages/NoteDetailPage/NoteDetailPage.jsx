@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { BiSolidTrashAlt } from "react-icons/bi";
 import { FiEdit } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
-import "./NoteDetailPage.css";
+import "./index.css";
 import axios from "axios";
-import { FormatDate } from "../components/FormatDate";
-import Modal from "../components/Modal";
+import { FormatDate } from "../../utils/FormatDate";
+import Modal from "../../components/Modal/Modal";
 
 const NoteDetailPage = ({ deleteNote }) => {
   const [note, setNote] = useState({});

@@ -35,7 +35,7 @@ const EditNotePage = ({ updateNote }) => {
 
     if (!title && !body && !category) return;
     updateNote(updateNoteObject, slug);
-    navigate(`/notes/${slug}`);
+    navigate(`/`);
   };
 
   return (

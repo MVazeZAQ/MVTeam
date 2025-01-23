@@ -8,7 +8,7 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import AddNotePage from "./pages/AddOrDeleteNotePage/AddNotePage";
 import EditNotePage from "./pages/AddOrDeleteNotePage/EditNotePage";
-import NoteDetailPage from "./pages/NoteDetailPage";
+import NoteDetailPage from "./pages/NoteDetailPage/NoteDetailPage";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
