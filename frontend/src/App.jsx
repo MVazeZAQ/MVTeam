@@ -39,14 +39,27 @@ const App = () => {
 
   // Fetch notes when the search text changes
   useEffect(() => {
-    if (searchText.length < 3) return;
-    axios
-      .get(`http://127.0.0.1:8008/notes-search/?search=${searchText}`)
-      .then((res) => {
-        console.log(res.data);
-        setNotes(res.data);
-      })
-      .catch((err) => console.log(err.message));
+    if (searchText.length === 0) {
+      // If searchText is empty, fetch all notes
+      axios
+        .get("http://127.0.0.1:8008/notes/")
+        .then((res) => {
+          setNotes(res.data);
+        })
+        .catch((err) => console.log(err.message));
+      return;
+    }
+
+    if (searchText.length >= 3) {
+      // If searchText is 3 or more characters, perform the search
+      axios
+        .get(`http://127.0.0.1:8008/notes-search/?search=${searchText}`)
+        .then((res) => {
+          console.log(res.data);
+          setNotes(res.data);
+        })
+        .catch((err) => console.log(err.message));
+    }
   }, [searchText]);
 
   // Fetch notes when the component mounts or shouldFetch changes
