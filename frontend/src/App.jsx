@@ -52,12 +52,20 @@ const App = () => {
 
       .catch((err) => console.log(err.message));
   };
+  const deleteNote = (slug) => {
+    axios
+      .delete(`http://127.0.0.1:8008/notes/${slug}`)
+      .catch((err) => console.log(err.message));
+  };
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage notes={notes} loading={isLoading} />} />
         <Route path="/add-notes" element={<AddNotePage addNote={addNote} />} />
-        <Route path="/notes/:slug" element={<NoteDetailPage />} />
+        <Route
+          path="/notes/:slug"
+          element={<NoteDetailPage deleteNote={deleteNote} />}
+        />
         <Route
           path="/edit-note/:slug"
           element={<EditNotePage updateNote={updateNote} />}
