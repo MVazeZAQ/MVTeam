@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./AddNotePage.css";
+import "./index.css";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -70,7 +70,7 @@ const EditNotePage = ({ updateNote }) => {
 
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
-          Note's category
+          Category
         </label>
         <select
           className="form-select"

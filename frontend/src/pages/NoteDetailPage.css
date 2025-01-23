@@ -30,12 +30,12 @@
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #010e0b;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #363a38;
 }
 
 .btn-danger {

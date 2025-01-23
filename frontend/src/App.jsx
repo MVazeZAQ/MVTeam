@@ -6,13 +6,12 @@ import {
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
-import AddNotePage from "./pages/AddNotePage";
-import NotePage from "./pages/NoteDetailPage";
-import EditNotePage from "./pages/EditNotePage";
+import AddNotePage from "./pages/AddOrDeleteNotePage/AddNotePage";
+import EditNotePage from "./pages/AddOrDeleteNotePage/EditNotePage";
+import NoteDetailPage from "./pages/NoteDetailPage";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
-import NoteDetailPage from "./pages/NoteDetailPage";
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -105,7 +104,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/add-notes" element={<AddNotePage addNote={addNote} />} />
+        <Route path="/add-note" element={<AddNotePage addNote={addNote} />} />
         <Route
           path="/notes/:slug"
           element={<NoteDetailPage deleteNote={deleteNote} />}

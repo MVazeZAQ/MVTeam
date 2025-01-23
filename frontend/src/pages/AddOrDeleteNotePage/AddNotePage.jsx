@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddNotePage.css";
+import "./index.css";
 import { useNavigate } from "react-router-dom";
 
 const AddNotePage = ({ addNote }) => {
@@ -57,7 +57,7 @@ const AddNotePage = ({ addNote }) => {
 
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
-          Note's category
+          Category ategory
         </label>
         <select
           className="form-select"
