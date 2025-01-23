@@ -1,17 +1,18 @@
 
-# SCRUM Plan for iNotes Project
+# SCRUM Plan for Project
 
 ## Project Timeline
 - **Project Start Date:** October 20, 2024
-- **Total Sprints:** 2
-- **End Date:** December 20, 2024
+- **Total Sprints:** 4
+- **End Date:** Jan 30, 2025
 
-## Sprint Overview
+## Sprints Overview
 
 ### Sprint 1: October 20 - November 20, 2024
 **Goals:**
-- Set up the project structure.
-- Implement basic CRUD operations for notes.
+- Backend setup
+- CRUD notes functionalities
+- REST API
 
 **Completed Issues:**
 | Issue | Description | Assigned To | Status | Link |
@@ -30,8 +31,9 @@
 
 ### Sprint 2: November 21 - December 20, 2024
 **Goals:**
-- Implement the frontend components and connect them with the backend.
-- Test and debug the application.
+- Frontend setup
+- Reusable components
+- Static pages
 
 **Completed Issues:**
 | Issue | Description | Assigned To | Status | Link |
@@ -44,18 +46,42 @@
 | Issue #15 | Integrating "NavBar" Across All Pages enhancement | MVazeZAQ | Closed | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/15) |
 | Issue #16 | Creating the "Add Note" Page enhancement | Oguzhan Yazdicutan | Closed | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/16) |
 
-**Upcoming Issues:**
-| Issue | Description | Assigned To | Status | Link |
-|-------|-------------|-------------|--------|------|
-| Issue #17 | Developing the "Note Detail" Page | MVazeZAQ | Open | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/17) |
-| Issue #18 | Creating the "Edit Note" Page | MVazeZAQ | Open | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/18) |
-| Issue #19 | Connecting Django with React | MVazeZAQ | Open | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/19) |
-| Issue #20 | Fetching Notes in the Frontend | MVazeZAQ | Open | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/20) |
-| Issue #21 | Implementing Dynamic Note Coloring | MVazeZAQ | Open | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/21) |
-| Issue #22 | Formatting Date and Time in Note Objects | MVazeZAQ | Open | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/22) |
-| Issue #23 | Adding a Loading Spinner | MVazeZAQ | Open | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/23) |
+
+### Sprint 3: (November 21 - December 15, 2024)
+**Goals:**
+- Implement dynamic pages.
+- Connect with backend.
+- Design for better UI/UX experience.
+
+**Completed Issues:**
+
+| Issue # | Description                                     | Assigned To          | Status  | Link          |
+|---------|-------------------------------------------------|----------------------|---------|---------------|
+| #17     | Developing the "Note Detail" Page              | MVazeZAQ             | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/17) |
+| #18     | Create an "Edit a Note" Page                   | Sevval Ozyurt        | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/18) |
+| #19     | Connecting Django with React                   | Hajiyev Magsud       | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/19) |
+| #20     | Fetching Notes in the Frontend                 | Amanidinov           | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/20) |
+| #21     | Implementing Dynamic Note Coloring             | Vahid Nuraddinov     | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/21) |
+| #22     | Formatting Date and Time in Note Objects       | MVazeZAQ             | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/22) |
+| #23     | Adding a Loading Spinner                       | Oguzhan Yazdicutan   | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/23) |
 
 ---
 
-## Notes
-We will continue to document our progress and any changes made to the project throughout each sprint. All tasks and their progress are being tracked using GitHub Issues.
+### Sprint 4:  (December 16 - December 20, 2024)
+**Goals:**
+- Fully dynamic pages
+- Clean-up project
+- Filtering, Searching and all advanced functionalities.
+- Test and debug, fix bugs
+
+**Completed Issues:**
+
+| Issue # | Description                                     | Assigned To          | Status  | Link          |
+|---------|-------------------------------------------------|----------------------|---------|---------------|
+| #24     | Dynamic Note Detail Page                       | Oguzhan Yazdicutan   | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/24) |
+| #25     | Creating a New Note                            | Selamsahabe          | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/25) |
+| #26     | Implementing Toast Notifications               | Sevval Ozyurt        | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/26) |
+| #27     | Updating a Note                                | MVazeZAQ             | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/27) |
+| #28     | Deleting a Note                                | Amanidinov           | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/28) |
+| #29     | Filtering Notes                                | Vahid Nuraddinov     | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/29) |
+| #30     | Implementing Search Functionality (Backend and Frontend) | Hajiyev Magsud        | Closed  | [Link to Issue](https://github.com/MVazeZAQ/MVTeam/issues/30) |
