@@ -17,9 +17,13 @@ const App = () => {
   const [notes, setNotes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [filterText, setFilterText] = useState("");
+  const [searchText, setSearchText] = useState("");
 
   const handleFilterText = (val) => {
     setFilterText(val);
+  };
+  const handelSearchText = (val) => {
+    setSearchText(val);
   };
   const filteredNotes =
     filterText === "BUSINESS"
