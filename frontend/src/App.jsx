@@ -34,6 +34,16 @@ const App = () => {
       ? notes.filter((note) => note.category == "IMPORTANT")
       : notes;
   useEffect(() => {
+    if (searchText.length < 3) return;
+    axios
+      .get(`http://127.0.0.1:8008/notes-search/?search=${searchText}`)
+      .then((res) => {
+        console.log(res.data);
+        setNotes(res.data);
+      })
+      .catch((err) => console.log(err.message));
+  }, [searchText]);
+  useEffect(() => {
     setIsLoading(true);
     axios
       .get("http://127.0.0.1:8008/notes/")
@@ -76,7 +86,15 @@ const App = () => {
   };
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<MainLayout />}>
+      <Route
+        path="/"
+        element={
+          <MainLayout
+            searchText={searchText}
+            handelSearchText={handelSearchText}
+          />
+        }
+      >
         <Route
           index
           element={

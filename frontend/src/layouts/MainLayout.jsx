@@ -1,10 +1,13 @@
+import React from "react";
 import NavBar from "../components/NavBar";
 import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-const MainLayout = () => {
+import "react-toastify/dist/ReactToastify.css";
+
+const MainLayout = ({ searchText, handelSearchText }) => {
   return (
     <>
-      <NavBar />
+      <NavBar searchText={searchText} handelSearchText={handelSearchText} />
       <ToastContainer />
       <Outlet />
     </>
