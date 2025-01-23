@@ -79,4 +79,4 @@ To run the project, follow these steps:
     ```
     
 
-After completing these steps, you should have the backend running on port 8008 and the frontend development server running on its designated port.
+After completing these steps, you should have the backend running on port [5174](http://localhost:5174/) and the frontend development server running on its designated port.
