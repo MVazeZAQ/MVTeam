@@ -4,7 +4,13 @@ from inotesapp.serializers import NoteSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
-
+from django.db.models import Q
+@api_view(['GET'])
+def search_notes(request):
+    query = request.query_params.get("search")
+    notes = Note.objects.filter(Q(title__icontains=query) | Q(body__icontains=query) | Q(category__icontains=query))
+    serializer = NoteSerializer(notes, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
 @api_view(['GET', 'POST'])
 def notes(request):
     if request.method == 'GET':
