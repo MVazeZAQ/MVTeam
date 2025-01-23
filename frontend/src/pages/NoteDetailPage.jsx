@@ -13,7 +13,9 @@ const NoteDetailPage = ({ deleteNote }) => {
   const [isOpen, setIsOPen] = useState(false);
 
   const handleIsOpen = () => {
+    console.log("Modal open state before:", isOpen); // Debug log
     setIsOPen(!isOpen);
+    console.log("Modal open state after:", !isOpen); // Debug log
   };
 
   useEffect(() => {
@@ -27,6 +29,9 @@ const NoteDetailPage = ({ deleteNote }) => {
         console.log(err.message);
       });
   }, [slug]);
+  useEffect(() => {
+    console.log("isOpen updated:", isOpen);
+  }, [isOpen]);
 
   return (
     <>
