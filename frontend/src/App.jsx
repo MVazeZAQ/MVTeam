@@ -16,6 +16,19 @@ import NoteDetailPage from "./pages/NoteDetailPage";
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [filterText, setFilterText] = useState("");
+
+  const handleFilterText = (val) => {
+    setFilterText(val);
+  };
+  const filteredNotes =
+    filterText === "BUSINESS"
+      ? notes.filter((note) => note.category == "BUSINESS")
+      : filterText === "PERSONAL"
+      ? notes.filter((note) => note.category == "PERSONAL")
+      : filterText === "IMPORTANT"
+      ? notes.filter((note) => note.category == "IMPORTANT")
+      : notes;
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -60,7 +73,16 @@ const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<HomePage notes={notes} loading={isLoading} />} />
+        <Route
+          index
+          element={
+            <HomePage
+              notes={filteredNotes}
+              loading={isLoading}
+              handleFilterText={handleFilterText}
+            />
+          }
+        />
         <Route path="/add-notes" element={<AddNotePage addNote={addNote} />} />
         <Route
           path="/notes/:slug"

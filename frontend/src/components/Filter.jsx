@@ -1,28 +1,18 @@
 import React from "react";
 
-const filter = ["Business", "Personal", "Important"];
-
-const Filter = () => {
+const Filter = ({ handleFilterText }) => {
   return (
     <div className="container" style={{ width: "500px", margin: "20px auto" }}>
-      <label htmlFor="note-filter" className="form-label">
-        Filter Notes
-      </label>
       <select
-        id="note-filter"
         className="form-select"
-        aria-label="Filter Notes"
+        aria-label="Default select example"
         style={{ height: "50px" }}
-        defaultValue=""
+        onChange={(e) => handleFilterText(e.target.value)}
       >
-        <option value="" disabled>
-          Select Filter
-        </option>
-        {filter.map((option, index) => (
-          <option key={index} value={option}>
-            {option}
-          </option>
-        ))}
+        <option value="">All Notes</option>
+        <option value="BUSINESS">Business</option>
+        <option value="PERSONAL">Personal</option>
+        <option value="IMPORTANT">Important</option>
       </select>
     </div>
   );
