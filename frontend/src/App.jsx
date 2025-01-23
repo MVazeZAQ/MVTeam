@@ -8,7 +8,7 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import AddNotePage from "./pages/AddNotePage";
 import NotePage from "./pages/NoteDetailPage";
-import EditNotes from "./pages/EditNotePage";
+import EditNotePage from "./pages/EditNotePage";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
@@ -42,13 +42,14 @@ const App = () => {
         console.log(console.log(err.message));
       });
   };
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage notes={notes} loading={isLoading} />} />
         <Route path="/add-notes" element={<AddNotePage addNote={addNote} />} />
         <Route path="/notes/:slug" element={<NoteDetailPage />} />
-        <Route path="/edit-note" element={<EditNotes />} />
+        <Route path="/edit-note/:slug" element={<EditNotePage />} />
       </Route>
     )
   );
